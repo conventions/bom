@@ -14,7 +14,7 @@
         <primefaces.version>3.4.1</primefaces.version>
         <mojarra.version>2.1.7</mojarra.version>
         <primefaces.theme.version>1.0.8</primefaces.theme.version>
-        <primefaces-ext.version>0.6.0-SNAPSHOT</primefaces-ext.version>
+        <primefaces-ext.version>0.6.0</primefaces-ext.version>
     </properties>
     <parent>
         <groupId>org.sonatype.oss</groupId>

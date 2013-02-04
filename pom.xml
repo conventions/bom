@@ -11,10 +11,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <myfaces.codi.version>1.0.5</myfaces.codi.version>
         <hibernate.version>4.1.5.Final</hibernate.version>
-        <primefaces.version>3.4.1</primefaces.version>
+        <primefaces.version>3.5-SNAPSHOT</primefaces.version>
         <mojarra.version>2.1.7</mojarra.version>
         <primefaces.theme.version>1.0.8</primefaces.theme.version>
-        <primefaces-ext.version>0.6.0</primefaces-ext.version>
+        <primefaces-ext.version>0.6.2</primefaces-ext.version>
     </properties>
     <parent>
         <groupId>org.sonatype.oss</groupId>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.conventionsframework</groupId>
     <artifactId>conventions-bom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-RC3</version>
     <packaging>pom</packaging>
     <name>conventions-bom</name>
   

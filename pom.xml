@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.conventionsframework</groupId>
     <artifactId>conventions-bom</artifactId>
-    <version>1.0.0-RC3</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>conventions-bom</name>
   
@@ -12,7 +12,7 @@
         <myfaces.codi.version>1.0.6</myfaces.codi.version>
         <hibernate.version>4.3.4.Final</hibernate.version>
         <hibernate.validator.version>5.1.0.Final</hibernate.validator.version>
-        <primefaces.version>4.0</primefaces.version>
+        <primefaces.version>5.0.RC1</primefaces.version>
         <mojarra.version>2.1.7</mojarra.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
         <primefaces-ext.version>1.2.1</primefaces-ext.version>

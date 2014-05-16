@@ -1,19 +1,19 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.conventionsframework</groupId>
     <artifactId>conventions-bom</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
     <name>conventions-bom</name>
-  
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <myfaces.codi.version>1.0.6</myfaces.codi.version>
+        <deltaspike.version>0.7</deltaspike.version>
         <hibernate.version>4.3.4.Final</hibernate.version>
         <hibernate.validator.version>5.1.0.Final</hibernate.validator.version>
-        <primefaces.version>5.0.RC2</primefaces.version>
+        <primefaces.version>5.0</primefaces.version>
         <mojarra.version>2.1.14</mojarra.version>
         <primefaces.theme.version>1.0.10</primefaces.theme.version>
         <primefaces-ext.version>1.2.1</primefaces-ext.version>
@@ -22,7 +22,7 @@
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
         <version>7</version>
-        <relativePath />
+        <relativePath/>
     </parent>
     <licenses>
         <license>
@@ -37,16 +37,16 @@
         <developerConnection>scm:git:git@github.com:conventions/bom.git</developerConnection>
         <url>git@github.com:conventions/bom.git</url>
     </scm>
-    
+
     <dependencyManagement>
         <dependencies>
             <!-- Java EE -->
             <dependency>
                 <groupId>javax</groupId>
-                    <artifactId>javaee-web-api</artifactId>
-                    <version>6.0</version>
-                    <scope>provided</scope>
-                </dependency>
+                <artifactId>javaee-web-api</artifactId>
+                <version>6.0</version>
+                <scope>provided</scope>
+            </dependency>
             <dependency>
                 <groupId>com.sun.faces</groupId>
                 <artifactId>jsf-api</artifactId>
@@ -58,14 +58,14 @@
                 <artifactId>jsf-impl</artifactId>
                 <version>${mojarra.version}</version>
                 <scope>provided</scope>
-            </dependency> 
+            </dependency>
             <dependency>
                 <groupId>javax.el</groupId>
                 <artifactId>el-api</artifactId>
                 <version>2.2.1-b04</version>
                 <scope>provided</scope>
             </dependency>
-        
+
             <dependency>
                 <groupId>javax.enterprise</groupId>
                 <artifactId>cdi-api</artifactId>
@@ -79,10 +79,72 @@
                 <version>1</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- codi-->
             <dependency>
                 <groupId>org.apache.myfaces.extensions.cdi.bundles</groupId>
                 <artifactId>myfaces-extcdi-bundle-jsf20</artifactId>
                 <version>${myfaces.codi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
+                <artifactId>myfaces-extcdi-jsf20-module-impl</artifactId>
+                <version>${myfaces.codi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
+                <artifactId>myfaces-extcdi-jsf20-module-api</artifactId>
+                <version>${myfaces.codi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
+                <artifactId>myfaces-extcdi-core-impl</artifactId>
+                <version>${myfaces.codi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
+                <artifactId>myfaces-extcdi-core-api</artifactId>
+                <version>${myfaces.codi.version}</version>
+            </dependency>
+            <!-- deltaspike-->
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jpa-module-api</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jpa-module-impl</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jsf-module-api</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-jsf-module-impl</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.core</groupId>
+                <artifactId>deltaspike-core-impl</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.core</groupId>
+                <artifactId>deltaspike-core-api</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-security-module-api</artifactId>
+                <version>${deltaspike.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.deltaspike.modules</groupId>
+                <artifactId>deltaspike-security-module-impl</artifactId>
+                <version>${deltaspike.version}</version>
             </dependency>
             <!-- end JavaEE -->
             <!-- conventions -->
@@ -120,20 +182,20 @@
                 </exclusions>
             </dependency>
             <!-- end primefaces -->
-            
-            <!-- hibernate --> 
+
+            <!-- hibernate -->
             <dependency>
                 <groupId>org.hibernate.javax.persistence</groupId>
                 <artifactId>hibernate-jpa-2.0-api</artifactId>
                 <version>1.0.1.Final</version>
             </dependency>
-        
+
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-entitymanager</artifactId>
                 <version>${hibernate.version}</version>
             </dependency>
-                
+
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
@@ -145,35 +207,35 @@
                 <version>${hibernate.validator.version}</version>
             </dependency>
 
-            <!-- end hibernate --> 
+            <!-- end hibernate -->
 
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
                 <version>3.14.0-GA</version>
             </dependency>
-                
-                
+
+
             <!-- Logging -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>1.5.10</version>
             </dependency>
-        
+
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>1.1.1</version>
             </dependency>
             <!-- end Logging -->
-        
+
             <dependency>
-                  <groupId>org.apache.commons</groupId>
-                  <artifactId>commons-lang3</artifactId>
-                  <version>3.1</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
             </dependency>
-            
+
             <!--themes -->
             <dependency>
                 <groupId>org.primefaces.themes</groupId>
@@ -184,7 +246,7 @@
             <!-- end themes -->
         </dependencies>
     </dependencyManagement>
-      <profiles>
+    <profiles>
         <profile>
             <id>release</id>
             <activation>
@@ -239,13 +301,13 @@
             </build>
         </profile>
     </profiles>
-     <build>
+    <build>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
-        </resources>     
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -289,6 +351,6 @@
             <name>Prime Technology Maven Repository</name>
             <url>http://repository.primefaces.org</url>
             <layout>default</layout>
-        </repository>  
-    </repositories>    
+        </repository>
+    </repositories>
 </project>
